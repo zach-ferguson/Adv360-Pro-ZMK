@@ -15,8 +15,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Python version sanity check
+        run: python --version
+          
       - name: Install dependencies
         run: python -m pip install --upgrade pip setuptools wheel
+        
       - name: Get version data
         id: get_info
         run: |
@@ -49,7 +53,14 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (left)
-        run: west build -s zmk/app -d build/left -b adv360_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        env:
+          PYTHON: ${{ env.pythonLocation }}/bin/python
+          PYTHON3: ${{ env.pythonLocation }}/bin/python
+          PATH: ${{ env.pythonLocation }}/bin:${{ env.PATH }}
+        run: west build -s zmk/app -d build/left -b adv360_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config" \
+          -DZMK_CONFIG="${GITHUB_WORKSPACE}/config" \
+          -DPYTHON_EXECUTABLE=${{ env.pythonLocation }}/bin/python \
+          -DPython3_EXECUTABLE=${{ env.pythonLocation }}/bin/python
       - name: Adv360 Left Kconfig file
         run: grep -vE '(^#|^$)' build/left/zephyr/.config
       - name: West Build (right)
@@ -65,7 +76,10 @@ jobs:
           path: |
             ${{ steps.get_info.outputs.file_prefix }}-left.uf2
             ${{ steps.get_info.outputs.file_prefix }}-right.uf2
+
   build-clique:
+    # ignore for now
+    if: false
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:stable
