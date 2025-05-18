@@ -28,6 +28,13 @@
         bindings = <&kp GRAVE>, <&kp PIPE>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
+    pgrave: pipe_grave {
+        compatible = "zmk,behavior-mod-morph";
+        label = "pipe_grave";
+        #binding-cells = <0>;
+        bindings = <&kp PIPE>, <&kp GRAVE>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
     dtilde: dllr_tilde {
         compatible = "zmk,behavior-mod-morph";
         label = "dllr_tilde";
@@ -141,6 +148,20 @@
         bindings = <&kp AT>, <&kp CARET>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
+    cpyhome: cpy_home {
+        compatible = "zmk,behavior-mod-morph";
+        label = "cpy_home";
+        #binding-cells = <0>;
+        bindings = <&kp LC(C)>, <&kp HOME>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
+    pstend: pst_end {
+        compatible = "zmk,behavior-mod-morph";
+        label = "pst_end";
+        #binding-cells = <0>;
+        bindings = <&kp LC(V)>, <&kp END>;
+        mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+    };
 };
 
   keymap {
@@ -184,20 +205,20 @@
     };
     z_layer {
       bindings = <
-        &gpipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 4                                                                     &mo 3          &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
-        &kp TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &none                                                                      &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
-        &kp ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none              &kp LCTRL &kp LGUI    &kp LGUI  &kp RCTRL                &none          &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
-        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X                                &kp HOME   &kp PG_UP                                         &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
-        &mo 2     &dtilde     &ggrave   &kp LEFT &kp RIGHT                   &kp BKSP  &kp LALT  &kp END    &kp PG_DN &kp ENTER &kp SPACE                              &kp UP   &kp DOWN  &kp FSLH  &acaret  &mo 2
+        &pgrave   &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 4                                                                    &mo 3          &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
+        &kp TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &none                                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
+        &kp ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none              &kp LCTRL &kp LGUI   &kp LGUI  &kp RCTRL               &none          &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
+        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X                                &cpyhome   &kp PG_UP                                         &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
+        &mo 2     &dtilde     &ggrave   &kp LEFT &kp RIGHT                   &kp BKSP  &kp LALT  &pstend    &kp PG_DN &kp ENTER &kp SPACE                              &kp UP   &kp DOWN  &kp FSLH  &acaret  &mo 2
         >;
     };
     mac_layer {
       bindings = <
-        &gpipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 4                                                                     &mo 3          &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
-        &kp TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &none                                                                      &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
-        &kp ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none              &kp LCTRL &kp LALT    &kp LGUI  &kp RALT                &none          &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
-        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X                                &kp HOME    &kp PG_UP                                        &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
-        &mo 2     &dtilde     &ggrave   &kp LEFT &kp RIGHT                   &kp BKSP  &kp LGUI  &kp END     &kp PG_DN &kp ENTER &kp SPACE                             &kp UP   &kp DOWN  &kp FSLH  &acaret  &mo 2
+        &pgrave   &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 4                                                                    &mo 3          &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
+        &kp TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &none                                                                     &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
+        &kp ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none              &kp LCTRL &kp LALT   &kp LGUI  &kp RALT                &none          &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
+        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X                                &cpyhome   &kp PG_UP                                        &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
+        &mo 2     &dtilde     &ggrave   &kp LEFT &kp RIGHT                   &kp BKSP  &kp LGUI  &pstend    &kp PG_DN &kp ENTER &kp SPACE                             &kp UP   &kp DOWN  &kp FSLH  &acaret  &mo 2
         >;
     };
   };
