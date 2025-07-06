@@ -42,74 +42,74 @@
         bindings = <&kp DLLR>, <&kp TILDE>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    pkp_n1: plus_kp_n1 {
+    pkp_n1: plus_n1 {
         compatible = "zmk,behavior-mod-morph";
-        label = "plus_kp_n1";
+        label = "plus_n1";
         #binding-cells = <0>;
-        bindings = <&kp PLUS>, <&kp KP_N1>;
+        bindings = <&kp PLUS>, <&kp N1>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    lkp_n2: left_bracket_kp_n2 {
+    lkp_n2: left_bracket_n2 {
         compatible = "zmk,behavior-mod-morph";
-        label = "left_bracket_kp_n2";
+        label = "left_bracket_n2";
         #binding-cells = <0>;
-        bindings = <&kp LEFT_BRACKET>, <&kp KP_N2>;
+        bindings = <&kp LEFT_BRACKET>, <&kp N2>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    lkp_n3: left_brace_kp_n3 {
+    lkp_n3: left_brace_n3 {
         compatible = "zmk,behavior-mod-morph";
-        label = "left_brace_kp_n3";
+        label = "left_brace_n3";
         #binding-cells = <0>;
-        bindings = <&kp LEFT_BRACE>, <&kp KP_N3>;
+        bindings = <&kp LEFT_BRACE>, <&kp N3>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    lkp_n4: left_parenthesis_kp_n4 {
+    lkp_n4: left_parenthesis_n4 {
         compatible = "zmk,behavior-mod-morph";
-        label = "left_parenthesis_kp_n4";
+        label = "left_parenthesis_n4";
         #binding-cells = <0>;
-        bindings = <&kp LEFT_PARENTHESIS>, <&kp KP_N4>;
+        bindings = <&kp LEFT_PARENTHESIS>, <&kp N4>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    akp_n5: amps_kp_n5 {
+    akp_n5: amps_n5 {
         compatible = "zmk,behavior-mod-morph";
-        label = "amps_kp_n5";
+        label = "amps_n5";
         #binding-cells = <0>;
-        bindings = <&kp AMPS>, <&kp KP_N5>;
+        bindings = <&kp AMPS>, <&kp N5>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    ekp_n6: equal_kp_n6 {
+    ekp_n6: equal_n6 {
         compatible = "zmk,behavior-mod-morph";
-        label = "equal_kp_n6";
+        label = "equal_n6";
         #binding-cells = <0>;
-        bindings = <&kp EQUAL>, <&kp KP_N6>;
+        bindings = <&kp EQUAL>, <&kp N6>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    rkp_n7: right_parenthesis_kp_n7 {
+    rkp_n7: right_parenthesis_n7 {
         compatible = "zmk,behavior-mod-morph";
-        label = "right_parenthesis_kp_n7";
+        label = "right_parenthesis_n7";
         #binding-cells = <0>;
-        bindings = <&kp RIGHT_PARENTHESIS>, <&kp KP_N7>;
+        bindings = <&kp RIGHT_PARENTHESIS>, <&kp N7>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    rkp_n8: right_brace_kp_n8 {
+    rkp_n8: right_brace_n8 {
         compatible = "zmk,behavior-mod-morph";
-        label = "right_brace_kp_n8";
+        label = "right_brace_n8";
         #binding-cells = <0>;
-        bindings = <&kp RIGHT_BRACE>, <&kp KP_N8>;
+        bindings = <&kp RIGHT_BRACE>, <&kp N8>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    rkp_n9: right_bracket_kp_n9 {
+    rkp_n9: right_bracket_n9 {
         compatible = "zmk,behavior-mod-morph";
-        label = "right_bracket_kp_n9";
+        label = "right_bracket_n9";
         #binding-cells = <0>;
-        bindings = <&kp RIGHT_BRACKET>, <&kp KP_N9>;
+        bindings = <&kp RIGHT_BRACKET>, <&kp N9>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
-    skp_n0: star_kp_n0 {
+    skp_n0: star_n0 {
         compatible = "zmk,behavior-mod-morph";
-        label = "star_kp_n0";
+        label = "star_n0";
         #binding-cells = <0>;
-        bindings = <&kp STAR>, <&kp KP_N0>;
+        bindings = <&kp STAR>, <&kp N0>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
     eprcnt: excl_prcnt {
