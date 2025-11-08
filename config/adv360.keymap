@@ -167,14 +167,14 @@
         compatible = "zmk,behavior-mod-morph";
         label = "pst_home_mac";
         #binding-cells = <0>;
-        bindings = <&kp LGUI(V)>, <&kp HOME>;
+        bindings = <&kp LG(V)>, <&kp HOME>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
     cpyendmac: cpy_end_mac {
         compatible = "zmk,behavior-mod-morph";
         label = "cpy_end_mac";
         #binding-cells = <0>;
-        bindings = <&kp LGUI(C)>, <&kp END>;
+        bindings = <&kp LG(C)>, <&kp END>;
         mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
     };
 };
